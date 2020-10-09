@@ -145,31 +145,31 @@
 
         div:nth-child(1) {
             @extend .dot;
-            top: 190px;
+            top: 120px;
             transform: translateX(330px) rotate(-13deg) translate3d(0, 0, 0);
         }
 
         div:nth-child(2) {
             @extend .plus;
-            top: 200px;
+            top: 140px;
             transform: translateX(-240px) rotate(-13deg) translate3d(0, 0, 0);
         }
 
         div:nth-child(3) {
             @extend .dot;
-            top: 500px;
+            top: 430px;
             transform: translateX(-670px) scale(1.1);
         }
 
         div:nth-child(4) {
             @extend .plus;
-            top: 540px;
+            top: 470px;
             transform: translateX(-630px);
         }
 
         div:nth-child(5) {
             @extend .dot;
-            top: 690px;
+            top: 650px;
             transform: translateX(-40px) scale(.8);
         }
     }
