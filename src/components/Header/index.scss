@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+
+
+.header__container {
+    align-items: center;
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $screen-xl;
+    padding: 0 5%;
+}
+
+.header__logo {
+    display: block;
+    height: 41px;
+    width: 41px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.header__menu {
+    align-items: center;
+    background: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 30%;
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    transition: all .3s ease-in-out;
+    width: 100vw;
+    z-index: 90;
+
+    &--aberto {
+        @extend .header__menu;
+        right: 0;
+    }
+}
+
+.header__menu-toggle {
+    background-color: #fff;
+    background-image: url('/img/menu.svg');
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+.header__menu-toggle--close {
+    background-color: #fff;
+    background-image: url('/img/close-menu.svg');
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 5%;
+    top: 16px;
+    width: 40px;
+}
+
+
+.header__menu__link,
+a {
+    align-items: center;
+    color: #B8BECD;
+    display: flex;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    text-decoration: none;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &--selected {
+        color: #000;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:$screen-xl) {
+    .header__container {
+        height: 130px;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        padding: 0;
+        position: relative;
+        right: 0;
+        top: 0;
+        width: fit-content;
+    }
+
+    .header__menu-toggle,
+    .header__menu-toggle--close {
+        display: none;
+    }
+
+    .header__menu__link,
+    a {
+        align-items: center;
+        bottom: 98.44%;
+        color: #B8BECD;
+        display: flex;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        left: 46.69%;
+        line-height: 19px;
+        margin-right: 25px;
+        right: 50.44%;
+        text-decoration: none;
+        top: 1.17%;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

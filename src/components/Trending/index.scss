@@ -1,0 +1,71 @@
+@import "../../styles/variables.scss";
+
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending__card {
+    display: inline-block;
+    margin-bottom: 50px;
+
+    >img {
+        border-radius: 8px;
+        height: 200px;
+        object-fit: cover;
+        object-position: 50% 30%;
+        width: 100%;
+    }
+
+    >h4 {
+        color: #000000;
+        font-family: Inter;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 30px;
+        mix-blend-mode: normal;
+    }
+
+    >p {
+        color: #7D7987;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 26px;
+        mix-blend-mode: normal;
+    }
+
+    >a {
+        color: #FB8F1D;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        mix-blend-mode: normal;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .trending {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .trending__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 15px;
+        min-width: 200px;
+        width: calc(25% - 30px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

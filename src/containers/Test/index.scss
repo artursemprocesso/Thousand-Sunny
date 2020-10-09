@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+
+.test__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5% 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+    &--main {
+        @extend .test__section;
+        min-height: calc(100vh - 130px);
+    }
+
+    &--reverse {
+        @extend .test__section;
+        flex-direction: column-reverse;
+
+        .test__section__image {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}
+
+.test__section__text {
+    padding: 5%;
+}
+
+.test__section__image {
+    width: 100%;
+
+    img {
+        width: 100%;
+        max-width: fit-content;
+    }
+}
+
+
+.test__section__testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.test__section__trendig {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+
+@media only screen and (min-width: $screen-md) {
+
+    .test__section,
+    .test__section__testimonials,
+    .test__section__trendig {
+        //background-color: rgba(0, 0, 255, .05);
+        max-width: $screen-xl;
+    }
+
+    .test__section--reverse {
+        flex-direction: row;
+
+        .test__section__image {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .test__section__text {
+        width: 50%;
+    }
+
+}

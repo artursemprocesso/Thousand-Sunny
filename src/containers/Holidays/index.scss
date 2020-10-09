@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+
+
+.holidays {
+    //width: 100%;
+}
+
+.holidays__section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $screen-xl;
+    min-height: calc(100vh - 64px);
+    padding: 0 5%;
+}
+
+.holidays__section__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.holidays__section__itens {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.holidays__section__itens__card {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+
+    img {
+        border-radius: 8px;
+        height: 100%;
+        max-height: 350px;
+        object-fit: cover;
+        object-position: 50%;
+        width: 100%;
+    }
+}
+
+.holidays__section__itens__card__info {
+    background: #FFFFFF;
+    border-radius: 0px 6px 0px 0px;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    max-width: 150px;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.holidays__section__itens__card__info__title {
+    color: #042521;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    margin: 0;
+    mix-blend-mode: normal;
+}
+
+.holidays__section__itens__card__info__subtitle {
+    color: #80918E;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+    mix-blend-mode: normal;
+}
+
+
+@media screen and (min-width: $screen-md) {
+    .holidays__section {
+        //background-color: blue;
+        min-height: calc(100vh - 130px);
+    }
+
+    .holidays__section__header {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .holidays__section__itens {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .holidays__section__itens__card {
+        margin-right: 25px;
+        width: calc(25% - 25px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
