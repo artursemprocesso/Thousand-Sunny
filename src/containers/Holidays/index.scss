@@ -109,3 +109,54 @@
         }
     }
 }
+
+
+
+.holidays__plus-dot{
+    position: absolute;
+    margin:0 auto;
+    width: 100%;
+    z-index: 89;
+
+    > div{
+        display: block;
+        position: absolute;
+        left:50%;
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+    }
+
+    .plus{
+        background-image: url('/img/plus.svg');
+    }
+    .dot{
+        background-image: url('/img/dot.svg');
+    }
+
+    div:nth-child(1){
+        @extend .dot;
+        top:190px;
+        transform: translateX(330px) rotate(-13deg) translate3d(0, 0, 0);
+    }
+    div:nth-child(2){
+        @extend .plus;
+        top:200px;
+        transform: translateX(-240px) rotate(-13deg) translate3d(0, 0, 0);
+    }
+    div:nth-child(3){
+        @extend .dot;
+        top:500px;
+        transform: translateX(-670px) scale(1.1);
+    }
+    div:nth-child(4){
+        @extend .plus;
+        top:540px;
+        transform: translateX(-630px);
+    }
+    div:nth-child(5){
+        @extend .dot;
+        top:690px;
+        transform: translateX(-40px) scale(.8);
+    }
+}

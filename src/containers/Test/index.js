@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import Header from '../../components/Header'
 import Testimonial from '../../components/Testimonial'
+import Trending from '../../components/Trending'
 import Footer from '../../components/Footer'
 
 const listLocations = ["Africa", "America", "Antarctica", "Asia", "Europe"]
@@ -17,6 +18,23 @@ export default function Test() {
     return (
         <div className="test">
             <Header />
+            <div className="plus-dot">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <div className="row test__section--main test__section--reverse">
                 <div className="test__section__text">
                     <h1>Explore and Travel</h1>
@@ -67,7 +85,11 @@ export default function Test() {
             </div>
 
             <div className="test__section__trendig">
-                <h2>Teste</h2>
+                <div className="home__section__trendig__header">
+                    <h2>Trending stories</h2>
+                    <Link className="view-all" to="/">View all</Link>
+                </div>
+                <Trending />
             </div>
 
             <Footer />

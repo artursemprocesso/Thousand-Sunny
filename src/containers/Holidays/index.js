@@ -36,10 +36,20 @@ export default function HomeScreen({ data }) {
         window.scrollTo(0, 0);
     }, []);
 
+    const getPlusDot = () => {
+        let list = []
+        for (let i = 0; i < 5; i++) {
+            list.push(<div/>)
+        }
+        return list
+    }
+
     return (
         <div className="holidays">
             <Header currentPage={0} />
-
+            <div className="holidays__plus-dot">
+                {getPlusDot()}
+            </div>
             <div className="holidays__section">
                 <div className="holidays__section__header">
                     <h2>Holidays {local && `in ${local}`}</h2>

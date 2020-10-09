@@ -5,6 +5,10 @@
     margin: 0;
     outline: none;
     padding: 0;
+
+    &::selection {
+        background-color: $color-primary;
+    }
 }
 
 div {

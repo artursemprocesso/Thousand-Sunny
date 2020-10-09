@@ -87,7 +87,7 @@
     padding: 0 5%;
 
     a {
-        margin: 25px 25px 25px 0;
+        margin: 25px 35px 25px 0;
         transition: all .2s ease;
 
         &:nth-of-type(5) {
@@ -108,6 +108,7 @@
 
     .footer__container__columns {
         flex-direction: row;
+        margin-bottom: 50px;
     }
 
     .footer__container__columns__col--main {
